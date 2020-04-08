@@ -1,0 +1,137 @@
+.testimonialitem {
+  display: flex;
+  &-img {
+    &-container {
+      position: relative;
+      margin-left: 31px;
+      margin-bottom: 42px;
+      &::after {
+        position: absolute;
+        z-index: -1;
+        left: -31px;
+        bottom: -42px;
+        content: "";
+        display: block;
+        width: 184px;
+        height: 184px;
+        background-color: #f7931e;
+        @media screen and (max-width: 775px) {
+          top: 15%;
+        }
+        @media screen and (max-width: 425px) {
+          width: 50%;
+          height: 90px;
+        }
+      }
+      @media screen and (max-width: 775px) {
+        margin-bottom: 0;
+      }
+      @media screen and (max-width: 425px) {
+        width: 200px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 775px) {
+      display: flex;
+    }
+    &-mobile {
+      display: none;
+      width: 100%;
+      height: 100px;
+      background-color: black;
+      align-self: center;
+      font-family: "Sofia Pro Medium";
+      font-size: 40px;
+      color: white;
+      p {
+        margin: 5%;
+      }
+      @media screen and (max-width: 775px) {
+        display: block;
+      }
+      @media screen and (max-width: 425px) {
+        height: 50px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 77px;
+    padding-bottom: 42px;
+    &-content {
+      font-family: "Sofia Pro Light";
+      font-size: 23px;
+      line-height: 45px;
+      @media screen and (max-width: 425px) {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+    &-author {
+      margin-top: auto;
+      font-family: "Sofia Pro Semi Bold";
+      font-size: 23px;
+      line-height: 45px;
+      @media screen and (max-width: 775px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 775px) {
+      margin: 5%;
+    }
+    @media screen and (max-width: 425px) {
+      margin: 15px;
+    }
+  }
+  @media screen and (max-width: 775px) {
+    display: block;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: auto !important;
+  left: auto !important;
+  margin: 0;
+}
+.swiper-pagination-bullet {
+  border-radius: 0;
+  width: 60px;
+  height: 3px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+.swiper-pagination-bullet-active {
+  background: #f7931e;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}

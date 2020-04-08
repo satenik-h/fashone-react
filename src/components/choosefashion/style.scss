@@ -1,0 +1,193 @@
+.fashionitem {
+  position: relative;
+  margin-top: 127px;
+  &-title {
+    z-index: 1;
+    text-transform: uppercase;
+    background-color: white;
+    font-family: "Helvetica Neue Medium";
+    font-size: 50px;
+    color: #d1c0ad;
+    display: inline-block;
+    @media screen and (max-width: 1050px) {
+      font-size: 40px;
+    }
+  }
+  &-left {
+    position: absolute;
+    top: -49px;
+    padding-bottom: 49px;
+    padding-right: 59px;
+    @media screen and (max-width: 1050px) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      display: block;
+      padding: 0px;
+      margin-top: -80px;
+      padding-bottom: 49px;
+    }
+  }
+  &-center {
+    display: block;
+    text-align: center;
+    margin-top: -49px;
+    margin-bottom: 69px;
+  }
+  &-right {
+    position: absolute;
+    top: -49px;
+    right: 0px;
+    padding-bottom: 49px;
+    padding-left: 59px;
+    @media screen and (max-width: 1050px) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      display: block;
+      padding: 0px;
+      margin-top: -80px;
+      padding-bottom: 49px;
+    }
+  }
+  &-img {
+    img {
+      z-index: -1;
+      width: 100%;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(50%);
+      }
+    }
+  }
+}
+
+.choosefashion {
+  margin-bottom: 200px;
+  &-container {
+    height: 100%;
+    display: flex;
+  }
+  &-column-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: 775px) {
+      flex-direction: column;
+    }
+  }
+  &-title {
+    background: url("../../assets/img/fashion-back.png") no-repeat center center;
+    background-size: cover;
+    &-container {
+      margin-top: 300px;
+      margin-bottom: 202px;
+      @media screen and (max-width: 425px) {
+        margin-top: 150px;
+      }
+    }
+    &-tag {
+      margin-bottom: 60px;
+      width: 60px;
+      height: 3px;
+      background-color: black;
+    }
+    &-content {
+      font-family: "Helvetica Neue Medium";
+      font-size: 90px;
+      line-height: 120px;
+      span {
+        font-size: 50px;
+      }
+      @media screen and (max-width: 425px) {
+        line-height: 60px;
+        font-size: 50px;
+        span {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  &-column1,
+  &-column2,
+  &-column3 {
+    width: 33.33333%;
+    @media screen and (max-width: 1050px) {
+      width: 30%;
+    }
+    @media screen and (max-width: 775px) {
+      width: 100%;
+    }
+  }
+  &-column1 {
+    @media screen and (max-width: 775px) {
+      order: 2;
+    }
+    display: flex;
+    &-container {
+      margin-right: auto;
+      @media screen and (max-width: 1050px) {
+        width: 100%;
+      }
+    }
+  }
+  &-column2 {
+    @media screen and (max-width: 775px) {
+      order: 1;
+    }
+    display: flex;
+    background-color: white;
+    margin-top: -100px;
+    &-container {
+      margin-left: auto;
+      margin-right: auto;
+      @media screen and (max-width: 1050px) {
+        width: 100%;
+      }
+    }
+  }
+  &-column3 {
+    @media screen and (max-width: 775px) {
+      order: 2;
+    }
+    display: flex;
+    &-container {
+      @media screen and (max-width: 1050px) {
+        width: 100%;
+      }
+      margin-left: auto;
+    }
+  }
+  &-more {
+    text-align: center;
+    align-self: center;
+    font-family: "Helvetica Neue Bold";
+    font-size: 90px;
+    line-height: 120px;
+    display: flex;
+    height: auto;
+    p {
+      margin: 150px auto 150px auto;
+      &:hover {
+        cursor: pointer;
+        color: #f7931e;
+      }
+    }
+    @media screen and (max-width: 775px) {
+      display: none;
+    }
+  }
+  &-mobile {
+    display: none;
+    @media screen and (max-width: 775px) {
+      display: flex;
+      font-size: 70px;
+      p {
+        margin: 50px auto 50px auto;
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    margin-bottom: 0px;
+  }
+}

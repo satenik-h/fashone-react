@@ -1,0 +1,209 @@
+.footer {
+  &-container {
+    width: 100%;
+    display: flex;
+  }
+  &-subscribe {
+    height: 387px;
+    background-color: black;
+    display: flex;
+    &-container {
+      display: flex;
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+      @media screen and (max-width: 775px) {
+        display: block;
+      }
+    }
+    &-title {
+      margin-right: auto;
+      text-transform: uppercase;
+      font-family: "Helvetica Neue Bold";
+      font-size: 50px;
+      line-height: 70px;
+      color: white;
+      p {
+        text-transform: none;
+        margin: 0;
+        font-family: "Sofia Pro UltraLight";
+        font-size: 21px;
+        line-height: 70px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 40px;
+      }
+    }
+    &-button {
+      margin-left: auto;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      text-align: center;
+      &-email,
+      &-submit {
+        font-family: "Sofia Pro Light";
+        display: flex;
+        width: 610px;
+        height: 65px;
+        border-radius: 5px;
+        @media screen and (max-width: 1050px) {
+          width: 500px;
+        }
+        @media screen and (max-width: 949px) {
+          width: 400px;
+        }
+        @media screen and (max-width: 775px) {
+          width: 100%;
+        }
+      }
+      &-email {
+        outline: none;
+        font-size: 18px;
+        text-align: center;
+        background: transparent;
+        color: #e1e1e1;
+        border: 1px solid #dddddd;
+        &:focus {
+          border: 1px solid #f7931e;
+        }
+      }
+      &-submit {
+        margin-top: 20px;
+        background-color: white;
+        color: black;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      span {
+        margin: auto;
+      }
+    }
+    &-error {
+      font-family: "Sofia Pro Light";
+      text-transform: none;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 19px;
+      text-align: left;
+      color: #ff2300;
+    }
+    &-error-border {
+      border-color: #ff2300;
+      &:focus {
+        border-color: #ff2300;
+      }
+    }
+    &-hide {
+      display: none;
+    }
+    &-submit {
+      color: white;
+      font-family: "Helvetica Neue Medium";
+      font-size: 50px;
+      line-height: 70px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &-contact {
+    height: 245px;
+    display: flex;
+    font-family: "Sofia Pro Light";
+    &-container {
+      width: 100%;
+      display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
+      @media screen and (max-width: 425px) {
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &-logo {
+      &-copyright {
+        font-size: 20px;
+        line-height: 45px;
+      }
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
+    }
+    &-social {
+      margin-left: auto;
+      &-link {
+        a {
+          margin-left: 44px;
+          font-size: 20px;
+          line-height: 24px;
+          text-decoration: none;
+          color: #4d4d4d;
+          &:hover {
+            color: #f7931e;
+          }
+        }
+      }
+      &-icon {
+        margin-top: 38px;
+        font-size: 20px;
+        i {
+          margin-left: 48px;
+          &:hover {
+            cursor: pointer;
+            color: #f7931e;
+          }
+        }
+      }
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
+    }
+    &-mobile {
+      &-logo,
+      &-social,
+      &-privacy,
+      &-copyright {
+        display: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        @media screen and (max-width: 425px) {
+          display: block;
+        }
+      }
+      &-social {
+        font-size: 20px;
+        i {
+          margin-left: 48px;
+          &:hover {
+            cursor: pointer;
+            color: #f7931e;
+          }
+          &:nth-child(1) {
+            margin-left: 0px;
+          }
+        }
+      }
+      &-privacy {
+        a {
+          font-size: 20px;
+          line-height: 24px;
+          text-decoration: none;
+          color: #4d4d4d;
+          &:hover {
+            color: #f7931e;
+          }
+          &:nth-child(1) {
+            margin-right: 20px;
+          }
+        }
+      }
+      &-copyright {
+        color: #4d4d4d;
+        font-size: 20px;
+        line-height: 45px;
+      }
+    }
+  }
+}

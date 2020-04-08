@@ -1,0 +1,184 @@
+.stastep {
+  &-step-num {
+    font-family: "Helvetica Neue Bold";
+    font-size: 150px;
+    line-height: 70px;
+    color: #ff9900;
+    @media screen and (max-width: 425px) {
+      font-size: 90px;
+    }
+  }
+  &-step-title {
+    margin-top: 36px;
+    font-family: "Helvetica Neue Bold";
+    font-size: 50px;
+    line-height: 70px;
+    @media screen and (max-width: 425px) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+  &-step-desc {
+    font-family: "Sofia Pro Light";
+    font-size: 21px;
+    line-height: 35px;
+    color: #4d4d4d;
+    @media screen and (max-width: 425px) {
+      font-size: 15px;
+      line-height: 20px;
+      margin-top: 38px;
+    }
+  }
+  &-title {
+    font-size: 70px;
+    font-family: "Helvetica Neue Medium";
+    line-height: 120px;
+    margin-top: 128px;
+    margin-bottom: 208px;
+    &-tag {
+      width: 60px;
+      height: 3px;
+      background-color: black;
+      margin-bottom: 60px;
+    }
+    &-section {
+      span {
+        text-transform: uppercase;
+        @media screen and (max-width: 425px) {
+          text-transform: lowercase;
+          font-size: 30px;
+        }
+      }
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 0;
+    }
+  }
+  &-step1 {
+    background: url("../../assets/img/step-back.png") no-repeat center center;
+    background-size: cover;
+    &-section {
+      display: flex;
+      @media screen and (max-width: 775px) {
+        flex-direction: column;
+      }
+    }
+    &-left {
+      width: 45%;
+      margin-top: 270px;
+      @media screen and (max-width: 775px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 425px) {
+        margin-top: 150px;
+      }
+    }
+    &-right {
+      width: 50%;
+      margin-top: 100px;
+      margin-left: auto;
+      img {
+        @media screen and (max-width: 1300px) {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 775px) {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+  }
+  &-step2 {
+    margin-top: 150px;
+    &-section {
+      display: flex;
+      @media screen and (max-width: 775px) {
+        flex-direction: column-reverse;
+      }
+    }
+    &-left {
+      width: 50%;
+      @media screen and (max-width: 1300px) {
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 775px) {
+        width: 100%;
+      }
+    }
+    &-right {
+      width: 45%;
+      margin: auto 0px auto auto;
+      @media screen and (max-width: 775px) {
+        width: 100%;
+      }
+    }
+  }
+  &-step3 {
+    background: url("../../assets/img/step-back.png") no-repeat center center;
+    background-size: cover;
+    &-section {
+      display: flex;
+      @media screen and (max-width: 775px) {
+        flex-direction: column;
+      }
+    }
+    &-left {
+      width: 45%;
+      margin-top: 270px;
+      @media screen and (max-width: 775px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 425px) {
+        margin-top: 150px;
+      }
+    }
+    &-right {
+      width: 50%;
+      margin-top: 100px;
+      margin-left: auto;
+      @media screen and (max-width: 1300px) {
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 775px) {
+        width: 100%;
+        margin-top: 0px;
+      }
+    }
+  }
+  &-testimonial {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    @media screen and (max-width: 425px) {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    &-tag {
+      width: 60px;
+      height: 3px;
+      background-color: black;
+      margin-bottom: 60px;
+    }
+    &-title {
+      font-family: "Helvetica Neue Medium";
+      font-size: 90px;
+      line-height: 120px;
+      margin-bottom: 171px;
+      @media screen and (max-width: 425px) {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 50px;
+      }
+    }
+    &-container {
+      @media screen and (max-width: 775px) {
+        padding: 0;
+      }
+    }
+  }
+}
