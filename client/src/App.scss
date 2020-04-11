@@ -1,0 +1,61 @@
+.app-cookie {
+  background-color: rgba(50, 53, 59, 0.9);
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-family: "Sofia Pro Light";
+  font-size: 15px;
+  transition: 400ms;
+  transform: translateY(100%);
+
+  &-desc {
+    margin: auto;
+    padding: 10px;
+    a {
+      color: white;
+      &:hover {
+        color: #f7931e;
+      }
+    }
+  }
+
+  &-button {
+    margin: auto;
+    display: flex;
+
+    &-accept,
+    &-close {
+      text-align: center;
+      width: 50px;
+      border-radius: 2px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &-accept {
+      color: white;
+      background-color: #f7931e;
+      margin-right: 10px;
+      &:hover {
+        background-color: black;
+      }
+    }
+    &-close {
+      color: #f7931e;
+      background-color: white;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+  @media screen and (max-width: 925px) {
+    flex-direction: column;
+    height: 100px;
+  }
+  &-active {
+    transform: translateY(0%);
+  }
+}

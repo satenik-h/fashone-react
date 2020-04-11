@@ -1,0 +1,143 @@
+.register {
+  &-tag {
+    width: 60px;
+    height: 3px;
+    background-color: black;
+  }
+  &-title {
+    width: 65%;
+    margin-top: 87px;
+    margin-bottom: 87px;
+    font-family: "Helvetica Neue Medium";
+    font-size: 70px;
+    line-height: 100px;
+    @media screen and (max-width: 949px) {
+      width: 100%;
+      font-size: 60px;
+    }
+    @media screen and (max-width: 425px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  &-subtitle {
+    font-family: "Sofia Pro Light";
+    font-size: 20px;
+    line-height: 24px;
+    color: #666f6f;
+  }
+  &-form {
+    &-input {
+      box-sizing: border-box;
+      display: flex;
+      width: 665px;
+      height: 65px;
+      margin-bottom: 16px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border: 1px solid #dddddd;
+      background-color: white !important;
+      &:focus-within {
+        border: 1px solid #fddebb;
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        padding: 0;
+        font-family: "Sofia Pro Light";
+        font-size: 18px;
+        line-height: 22px;
+      }
+      span {
+        margin: auto;
+        width: 8px;
+        height: 8px;
+        background-color: #579e11;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    &-button {
+      display: flex;
+      width: 665px;
+      height: 52px;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      font-family: "Sofia Pro Light";
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      span {
+        margin: auto;
+      }
+      &:hover {
+        background-color: #f7931e;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    &-hide {
+      visibility: hidden;
+    }
+  }
+  &-error {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 16px;
+    color: #ff2300;
+  }
+  &-error-border {
+    border-color: #ff2300;
+    &:focus-within {
+      border-color: #ff2300;
+    }
+  }
+  &-checkbox-container {
+    display: flex;
+    font-family: "Sofia Pro Light";
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #666f6f;
+    cursor: pointer;
+  }
+  &-checkbox {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin-right: 23px;
+  }
+  &-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #dddddd;
+    &:hover {
+      background-color: lightgrey;
+    }
+    &-checked {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 9px;
+        height: 9px;
+        background-color: black;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}

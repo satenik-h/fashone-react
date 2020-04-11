@@ -1,0 +1,20 @@
+.collapseitem {
+  border: 1px solid lightgrey;
+  width: 70%;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  &-button {
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    div {
+      color: #f7931e;
+      margin-right: 10px;
+    }
+  }
+  &-content {
+    padding: 0px 20px 20px 40px;
+  }
+}
