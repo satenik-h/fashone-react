@@ -45,8 +45,21 @@ function Register({ active }) {
     setErrors({ ...temperrors });
 
     if (validateForm(errors)) {
-      const form = await axios.post("/api/form", { name, email, socialName });
-      setTitle(false);
+      // const form = await axios.post("/api/form", { name, email, socialName });
+      let data = {
+        email: email,
+        name: name,
+        socialmedia: socialName === "" ? "Fashion Seeker" : socialName,
+      };
+
+      await axios
+        .post("http://localhost:3030/api/sendmail", data)
+        .then(() => {
+          setTitle(false);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     }
   };
 

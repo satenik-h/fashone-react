@@ -1,55 +1,36 @@
-var express = require("express");
-var app = express();
+const express = require("express");
 const cors = require("cors");
-const logger = require("morgan");
+const sgMail = require("@sendgrid/mail");
+const dotenv = require("dotenv");
+dotenv.config();
 
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
-
-app.use(logger("dev"));
+const app = express();
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-app.post("/api/form", function (req, res) {
-  var nodemailer = require("nodemailer");
-  var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // secure:true for port 465, secure:false for port 587
-    auth: {
-      user: "flurofast@gmail.com",
-      pass: "Flurofast123",
-    },
-  });
-  var mailOptions = {
-    from: req.body.email,
-    to: "flurofast@gmail.com",
-    subject: req.body.subject,
-    text:
-      "<" + req.body.email + "> " + req.body.name + " sent " + req.body.message,
-  };
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
-  });
-});
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 app.get("/", function (req, res) {
-  //  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-  //  res.render('client/build/index.html');
-  res.send({ res: "ok" });
+  res.send("Mail Server");
 });
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {}; // render the error page
-  res.status(err.status || 500);
-  res.send("error"); //this or res.status(err.status || 500).send('error')
+
+app.post("/api/sendmail", function (req, res) {
+  console.log(req.body);
+  const msg = {
+    to: "sathenikhambarian@gmail.com",
+    from: req.body.email,
+    subject: req.body.name,
+    text: req.body.socialmedia,
+  };
+
+  sgMail
+    .send(msg)
+    .then(() => {
+      res.send("email sent");
+    })
+    .catch((err) => {
+      console.error(err.response.body);
+    });
 });
+
 app.listen(3030);

@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import FOOTERLOGO from "../../assets/img/footer-logo.png";
 import "./style.scss";
 
 function Footer() {
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [submit, setSubmit] = useState(false);
 
   const validEmailRegex = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
+  const validateForm = (error) => {
+    let valid = true;
+    if (error.length > 0) valid = false;
+    return valid;
+  };
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -26,8 +32,29 @@ function Footer() {
     setError(temperror);
   };
 
-  const handleSubmit = () => {
-    setSubmit(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let temperror = error;
+    if (email === "") {
+      temperror = "Please check your email";
+    }
+    setError(temperror);
+
+    if (validateForm(temperror)) {
+      let data = {
+        email: email,
+        name: "Fashone",
+        socialmedia: "Fashone",
+      };
+      await axios
+        .post("http://localhost:3030/api/sendmail", data)
+        .then(() => {
+          setSubmit(true);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
   };
 
   return (
@@ -57,8 +84,8 @@ function Footer() {
                 )}
                 <div
                   className="footer-subscribe-button-submit"
-                  onClick={() => {
-                    handleSubmit();
+                  onClick={(e) => {
+                    handleSubmit(e);
                   }}
                 >
                   <span>SUBMIT</span>
