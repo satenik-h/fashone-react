@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
 app.post("/api/sendmail", function (req, res) {
   console.log(req.body);
   const msg = {
-    to: "sathenikhambarian@gmail.com",
+    to: "marketing@fashone.com",
     from: req.body.email,
     subject: req.body.name,
     text: req.body.socialmedia,
