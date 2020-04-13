@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
 app.post("/api/sendmail", function (req, res) {
   console.log(req.body);
   const msg = {
-    to: "marketing@fashone.com",
+    to: "sathenikhambarian@gmail.com",
     from: req.body.email,
     subject: req.body.name,
     text: req.body.socialmedia,
@@ -31,6 +31,10 @@ app.post("/api/sendmail", function (req, res) {
     .catch((err) => {
       console.error(err.response.body);
     });
+});
+
+app.get("/", function (req, res) {
+  res.send("Server is workgin");
 });
 
 app.listen(3030);
