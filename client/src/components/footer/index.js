@@ -47,7 +47,7 @@ function Footer() {
         socialmedia: "Fashone",
       };
       await axios
-        .post("http://localhost:3030/api/sendmail", data)
+        .post("http://fashone.com/api/sendmail", data)
         .then(() => {
           setSubmit(true);
         })
