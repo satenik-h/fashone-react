@@ -47,7 +47,7 @@ function Footer() {
         socialmedia: "Fashone",
       };
       await axios
-        .post("https://fashone.com/api/sendmail", data)
+        .post("/api/sendmail", data)
         .then(() => {
           setSubmit(true);
         })
@@ -108,7 +108,7 @@ function Footer() {
                 <img src={FOOTERLOGO} alt="footerlogo"></img>
               </a>
               <div className="footer-contact-logo-copyright">
-                © Fashione, All Rights Reserved
+                © 2020 Instafashion LTD , UK , All Rights Reserved
               </div>
             </div>
             <div className="footer-contact-social">
@@ -118,9 +118,15 @@ function Footer() {
                 <Link to="/faq">Faq</Link>
               </div>
               <div className="footer-contact-social-icon">
-                <i className="fab fa-instagram"></i>
-                <i className="fab fa-twitter"></i>
-                <i className="fab fa-facebook-f"></i>
+                <a href="https://www.instagram.com/fashonecom/" target="_blank">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/FashoneOfficial" target="_blank">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/Fashonecom" target="_blank">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
               </div>
             </div>
             <div className="footer-contact-mobile-logo">
@@ -129,9 +135,15 @@ function Footer() {
               </a>
             </div>
             <div className="footer-contact-mobile-social">
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-twitter"></i>
-              <i className="fab fa-facebook-f"></i>
+              <a href="https://www.instagram.com/fashonecom/" target="_blank">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/FashoneOfficial" target="_blank">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/Fashonecom" target="_blank">
+                <i className="fab fa-facebook-f"></i>
+              </a>
             </div>
             <div className="footer-contact-mobile-privacy">
               <Link to="/terms">Terms</Link>
@@ -139,7 +151,7 @@ function Footer() {
               <Link to="/faq">Faq</Link>
             </div>
             <div className="footer-contact-mobile-copyright">
-              © Fashione, All Rights Reserved
+              © 2020 Instafashion LTD , UK <br></br>All Rights Reserved
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ function Register({ active }) {
       };
 
       await axios
-        .post("https://fashone.com/api/sendmail", data)
+        .post("/api/sendmail", data)
         .then(() => {
           setTitle(false);
         })

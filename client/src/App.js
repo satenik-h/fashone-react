@@ -49,10 +49,10 @@ function App() {
           <Route exact path="/terms" component={Terms} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/defaultsta" component={DefaultFashionista} />
-          <Route exact path="/mainsta" component={MainFashionista} />
-          <Route exact path="/mainseeker" component={MainFashionseeker} />
-          <Route exact path="/staregister" component={StaRegister} />
-          <Route exact path="/seekerregister" component={SeekerRegister} />
+          <Route exact path="/Fashionista" component={MainFashionista} />
+          <Route exact path="/FashionSeeker" component={MainFashionseeker} />
+          <Route exact path="/FashionistaRegister" component={StaRegister} />
+          <Route exact path="/FashionRegister" component={SeekerRegister} />
         </Switch>
         <div id="cookieContainer" className="app-cookie">
           <p className="app-cookie-desc">

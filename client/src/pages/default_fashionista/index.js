@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import DocumentMeta from "react-document-meta";
+
 import Landing from "../../components/landing";
 import Intro from "../../components/intro";
 import Stastep from "../../components/stastep";
@@ -22,21 +24,22 @@ const stadata = {
   step1: {
     num: "01",
     title: "Schedule your Work",
-    desc: "Showcase who you are, your past work and what you are looking for",
+    desc:
+      "Schedule your work time direct in app, we help you stress free bookings and earning.",
     img: STEP1BACK,
   },
   step2: {
     num: "02",
     title: "Accept and Manage appointments",
     desc:
-      "Find and get contacted by the most relevant influencers for your brand or company with complete transparency on their profile audience statistics, portfolio, past reviews)",
+      "After you accept requests from users , you can see all your upcoming appointments easily in appointments tab.",
     img: STEP2BACK,
   },
   step3: {
     num: "03",
     title: "Earn easily from anywhere",
     desc:
-      "Discuss directly with the influencer and agree on the terms of the collaboration",
+      "After every consulting credits will be given to you which you can encash through your paypal account.",
     img: STEP3BACK,
   },
 };
@@ -58,16 +61,24 @@ function DefaultFashionista() {
 }
 
 function MainFashionista() {
+  const meta = {
+    title:
+      "Fashionista-Get Ready for Next Fashion Trend or Earn Money at Home as Fashionista-Fashone.",
+    description: "3 Step use for Fashionista EARN EASILY AT HOME",
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   return (
     <>
-      <Landing active={active}></Landing>
-      <Intro active={"main"}></Intro>
-      <Stastep {...stadata}></Stastep>
-      <Footer></Footer>
+      <DocumentMeta {...meta}>
+        <Landing active={active}></Landing>
+        <Intro active={"main"}></Intro>
+        <Stastep {...stadata}></Stastep>
+        <Footer></Footer>
+      </DocumentMeta>
     </>
   );
 }

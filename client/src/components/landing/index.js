@@ -31,18 +31,18 @@ function Landing({ active, register }) {
               active === "sta" || active === "seeker" ? "landing-hide" : ""
             }`}
           >
-            <Link to="/staregister">
+            <Link to="/FashionistaRegister">
               <div className="landing-left-button-sta">
                 <p>Fashionista Pre-register</p>
               </div>
             </Link>
-            <Link to="/seekerregister">
+            <Link to="/FashionRegister">
               <div className="landing-left-button-seek">
                 <p>Fashion Seeker Pre-register</p>
               </div>
             </Link>
           </div>
-          <Link to={`/${active}register`}>
+          <Link to={`/${active === "sta" ? "Fashionista" : "Fashion"}Register`}>
             <div
               className={`landing-sta-button ${
                 active === "sta" || active === "seeker" ? "landing-show" : ""

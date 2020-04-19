@@ -33,8 +33,4 @@ app.post("/api/sendmail", function (req, res) {
     });
 });
 
-app.get("/", function (req, res) {
-  res.send("Server is workgin");
-});
-
 app.listen(3030);

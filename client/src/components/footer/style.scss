@@ -148,7 +148,8 @@
       &-icon {
         margin-top: 38px;
         font-size: 20px;
-        i {
+        a {
+          color: black;
           margin-left: 48px;
           &:hover {
             cursor: pointer;
@@ -174,7 +175,8 @@
       }
       &-social {
         font-size: 20px;
-        i {
+        a {
+          color: black;
           margin-left: 48px;
           &:hover {
             cursor: pointer;

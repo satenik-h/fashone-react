@@ -22,12 +22,12 @@ function Header({ active }) {
           <img className="header-logo-mobile" src={LOGOMOBILE} alt="log"></img>
         </a>
         <div className="header-menu">
-          <Link to="/mainsta">
+          <Link to="/Fashionista">
             <div className={`${active === "sta" ? "header-menu-active" : ""}`}>
               FASHIONISTA
             </div>
           </Link>
-          <Link to="/mainseeker">
+          <Link to="/FashionSeeker">
             <div
               className={`${active === "seeker" ? "header-menu-active" : ""}`}
             >
@@ -46,7 +46,7 @@ function Header({ active }) {
         </div>
       </div>
       <div id="mobileMenu" className="header-mobile-menu">
-        <Link to="/mainsta">
+        <Link to="/Fashionista">
           <div
             className={`${active === "sta" ? "header-menu-active" : ""}`}
             onClick={() => {
@@ -56,7 +56,7 @@ function Header({ active }) {
             FASHIONISTA
           </div>
         </Link>
-        <Link to="/mainseeker">
+        <Link to="/FashionSeeker">
           <div
             className={`${active === "seeker" ? "header-menu-active" : ""}`}
             onClick={() => {

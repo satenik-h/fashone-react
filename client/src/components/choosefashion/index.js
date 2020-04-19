@@ -50,7 +50,7 @@ const ChooseFashion = () => {
             <div className="choosefashion-title-tag"></div>
             <div className="choosefashion-title-content">
               Choose Fahionistas<br></br>
-              <span>TO HELO YOU IN</span>
+              <span>TO HELP YOU IN</span>
             </div>
           </div>
         </div>

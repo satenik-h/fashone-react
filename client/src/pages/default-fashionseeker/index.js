@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import DocumentMeta from "react-document-meta";
+
 import Landing from "../../components/landing";
 import Intro from "../../components/intro";
 import Stastep from "../../components/stastep";
@@ -21,21 +23,22 @@ const seekerdata = {
   step1: {
     num: "01",
     title: "Search your Fashionista",
-    desc: "Showcase who you are, your past work and what you are looking for",
+    desc:
+      "We have different categories of Fashionista according to your fashion requirements. Search them instantly based on your needs.",
     img: STEP1BACK,
   },
   step2: {
     num: "02",
     title: "Pay and Book Fashionista",
     desc:
-      "Find and get contacted by the most relevant brands for your audience with complete transparency on what they have to offer",
+      "Pay and Book Fashionista with easy steps . Dont forget to write your fashion queries to help them understand your fashion problems.",
     img: STEP2BACK,
   },
   step3: {
     num: "03",
     title: "Connect easily with video and chat",
     desc:
-      "Discuss directly with the influencer and agree on the terms of the collaboration",
+      "After every consulting credits will be given to you which you can encash through your paypal account.",
     img: STEP3BACK,
   },
 };
@@ -57,16 +60,24 @@ function DefaultFashionseeker() {
 }
 
 function MainFashionseeker() {
+  const meta = {
+    title:
+      "Fashion Seeker-Get Ready for Next Fashion Trend or Earn Money at Home as Fashionista-Fashone.",
+    description: "3 Step use for Fashion Seeker TO BOOK AND CONSULT",
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });
 
   return (
     <>
-      <Landing active={active}></Landing>
-      <Intro active={"main"}></Intro>
-      <Stastep {...seekerdata}></Stastep>
-      <Footer></Footer>
+      <DocumentMeta {...meta}>
+        <Landing active={active}></Landing>
+        <Intro active={"main"}></Intro>
+        <Stastep {...seekerdata}></Stastep>
+        <Footer></Footer>
+      </DocumentMeta>
     </>
   );
 }
